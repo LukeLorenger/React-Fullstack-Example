@@ -2,6 +2,7 @@ import React from 'react';
 import "./SignUp.css";
 import { useState } from "react";
 import Axios from "axios";
+
 var key = Math.random().toString(36).substr(2, 9)
 
 function SignUp() {
@@ -16,7 +17,7 @@ function SignUp() {
     const addEmployee = () => {
       Axios.post("http://localhost:3001/create", {
         name: name,
-        age: age,
+        age: age, 
         country: country,
         position: position,
         wage: wage,
@@ -75,7 +76,7 @@ function SignUp() {
       <div key={key}>
       <div className="SignUp">
         <div className="information">
-          <label>Name:</label>
+          <label>Full Name:</label>
           <input
             type="text"
             onChange={(event) => {
@@ -130,7 +131,7 @@ function SignUp() {
                 <div>
                   <input
                     type="text"
-                    placeholder="2000..."
+                    placeholder="Set New Wage"
                     onChange={(event) => {
                       setNewWage(event.target.value);
                     }}

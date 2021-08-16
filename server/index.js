@@ -1,16 +1,27 @@
+require('dotenv').config()
 const express = require("express");
 const app = express();
 const mysql = require("mysql");
 const cors = require("cors");
 
+const {REACT_APP_USER, REACT_APP_HOST, REACT_APP_PASSWORD, REACT_APP_DATABASE} = process.env
+
+var app_user = REACT_APP_USER
+var app_host = REACT_APP_HOST
+var app_password = REACT_APP_PASSWORD
+var app_database = REACT_APP_DATABASE
+
+// console.log(app_user)
+
 app.use(cors());
 app.use(express.json());
 
+
 const db = mysql.createConnection({
-  user: "web_app",
-  host: "localhost",
-  password: "WU^!wj5m",
-  database: "users",
+  user: app_user,
+  host: app_host,
+  password: app_password,
+  database: app_database,
   insecureAuth : true
 });
 
