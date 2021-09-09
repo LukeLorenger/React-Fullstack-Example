@@ -11,6 +11,7 @@ import Home from './components/pages/Home';
 import Services from './components/pages/Services';
 import Products from './components/pages/Products';
 import SignUp from './components/pages/SignUp';
+import ThankYou from './components/pages/ThankYou';
 import DirectChatPage from './components/pages/DirectChatPage';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path='/services' component={Services} />
         <Route path='/products' component={Products} />
         <Route path='/sign-up' component={SignUp} />
+        <Route path='/thankyou' component={ThankYou} />
         <Route path='/directchatpage' component={DirectChatPage} />
       </Switch>
       <Footer />
