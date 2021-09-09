@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../App.css';
-import { ChatEngine } from 'react-chat-engine';
+import Cards from '../Cards';
 
 const { REACT_APP_PROJECTID, REACT_APP_USERNAME, REACT_APP_USERSECRET} = process.env
 
@@ -10,7 +10,9 @@ var secret = REACT_APP_USERSECRET
 
 function Home() {
     return (
-        <h1>Home</h1>
+        
+        <Cards />
+        
     )
 }
 
